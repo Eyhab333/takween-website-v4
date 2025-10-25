@@ -1,0 +1,13 @@
+{
+  "name": "takween-website",
+  "version": "1.0.0",
+  "description": "الموقع الرسمي لشركة تكوين المعرفة للتعليم",
+  "homepage": "https://USERNAME.github.io/takween-website",
+  "scripts": {
+    "predeploy": "npm run build || echo 'skip build'",
+    "deploy": "gh-pages -d ."
+  },
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
+  }
+}
