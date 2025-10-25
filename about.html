@@ -217,7 +217,7 @@
   }
 
   // شغّلها أول ما الصفحة تفتح
-  window.addEventListener('load', adjustHeaderPosition);
+  window.addEventListener('DOMContentLoaded', adjustHeaderPosition);
 
   // وشغّلها لما حجم الشاشة يتغير (مهم للجوال عشان الwrap)
   window.addEventListener('resize', adjustHeaderPosition);
