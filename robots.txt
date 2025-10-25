@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://takween-almaryfa.com/sitemap.xml
