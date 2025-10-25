@@ -1,0 +1,48 @@
+# ===============================
+# Takween Knowledge Website
+# Git Ignore File
+# ===============================
+
+# Node.js dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Build & Deployment
+dist/
+build/
+.cache/
+out/
+.DS_Store
+Thumbs.db
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# OS & Editor files
+.idea/
+.vscode/
+*.swp
+*.swo
+*.tmp
+*.log
+
+# GitHub Pages publish folder
+gh-pages/
+.gitignore~
+
+# Local preview or temp folders
+temp/
+tmp/
+coverage/
+*.bak
+*.old
+
+# Tailwind / PostCSS cache
+.pnp/
+.pnp.js
+.next/
+.parcel-cache/

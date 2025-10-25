@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>الشروط والأحكام – شركة تكوين المعرفة للتعليم</title>
+  <!-- Google font cairo -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Cairo', sans-serif;
+      background-color: #F8FAFC;
+      scroll-behavior: smooth;
+    }
+
+    /* Mobile menu */
+    #mobile-menu {
+      position: fixed;
+      top: 0; right: 0;
+      width: 75%; height: 100%;
+      background: rgba(14, 76, 110, 0.9);
+      backdrop-filter: blur(10px);
+      transform: translateX(100%);
+      transition: transform 0.4s ease;
+      z-index: 50;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+    }
+    #mobile-menu.active { transform: translateX(0); }
+    #mobile-menu a {
+      color: white; font-size: 1.3rem;
+      margin: 15px 0; text-decoration: none;
+    }
+    #mobile-menu a:hover { color: #A1E8AF; }
+
+    .hamburger.open span:nth-child(1){transform:rotate(45deg)translateY(8px);}
+    .hamburger.open span:nth-child(2){opacity:0;}
+    .hamburger.open span:nth-child(3){transform:rotate(-45deg)translateY(-8px);}
+    .header-shadow{box-shadow:0 4px 8px rgba(0,0,0,0.1);}
+  </style>
+</head>
+
+<body class="text-gray-800">
+
+  <!-- 🔹 Top Info Bar -->
+<div id="topBar" class="bg-[#0E4C6E] text-white text-sm md:text-base fixed top-0 left-0 w-full z-50">
+  <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center px-4 py-2 space-y-2 md:space-y-0">
+
+    <!-- Left: Contact Info -->
+    <div class="flex flex-wrap items-center justify-center gap-4">
+      <span class="flex items-center gap-1">
+        📞 <a href="tel:0501234567" class="hover:text-[#A1E8AF]">0503389699</a>
+      </span>
+      <span class="hidden md:inline">|</span>
+      <span class="flex items-center gap-1">
+        ✉️ <a href="mailto:info@takween-almaryfa.com" class="hover:text-[#A1E8AF]">info@takween-almaryfa.com</a>
+      </span>
+      <span class="hidden md:inline">|</span>
+      <span class="flex items-center gap-1">
+        📍 <a href="https://maps.app.goo.gl/QuFLHv1mbAHyYPM17" target="_blank" class="hover:text-[#A1E8AF]">الزلفي – السعودية</a>
+      </span>
+    </div>
+
+    <!-- Right: Social Icons -->
+    <div class="flex items-center gap-4">
+      
+      <a href="https://x.com/TakweenAlmaryfa" target="_blank" title="X (تويتر)" class="hover:text-[#A1E8AF] transition">
+        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968958.png" alt="X" class="w-5 h-5">
+      </a>
+      <a href="https://www.facebook.com/profile.php?id=61581563847710" target="_blank" title="فيسبوك" class="hover:text-[#A1E8AF] transition">
+  <img src="https://cdn-icons-png.flaticon.com/512/5968/5968764.png" alt="Facebook" class="w-5 h-5">
+</a>
+
+      
+    </div>
+
+  </div>
+</div>
+
+
+
+  <!-- Header -->
+  <header id="header" class="bg-[#0E4C6E] text-white fixed left-0 w-full z-40 transition-all duration-300">
+    <div class="max-w-6xl mx-auto flex justify-between items-center px-5 py-3">
+      <div class="flex items-center gap-3">
+        <img src="logo.PNG" alt="Logo" class="h-10 w-auto">
+        <h1 class="text-lg font-bold">شركة تكوين المعرفة للتعليم</h1>
+      </div>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex space-x-6 space-x-reverse">
+        <a href="index.html" class="hover:text-[#A1E8AF]">الرئيسية</a>
+        <a href="about.html" class="hover:text-[#A1E8AF]">من نحن</a>
+        <a href="services.html" class="hover:text-[#A1E8AF]">خدماتنا</a>
+        <a href="contact.html" class="hover:text-[#A1E8AF]">اتصل بنا</a>
+        <a href="privacy.html" class="hover:text-[#A1E8AF]"> سياسة الخصوصية</a>
+        <a href="terms.html" class="hover:text-[#A1E8AF]"> الشروط والأحكام</a>
+      </nav>
+
+      <!-- Hamburger -->
+      <div id="menu-btn" class="hamburger md:hidden flex flex-col cursor-pointer z-50">
+        <span class="h-1 w-7 bg-white mb-1 transition-all duration-300"></span>
+        <span class="h-1 w-7 bg-white mb-1 transition-all duration-300"></span>
+        <span class="h-1 w-7 bg-white transition-all duration-300"></span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu">
+    <a href="index.html">الرئيسية</a>
+    <a href="about.html">من نحن</a>
+    <a href="services.html">خدماتنا</a>
+    <a href="contact.html">اتصل بنا</a>
+    <a href="privacy.html" > سياسة الخصوصية</a>
+    <a href="terms.html" > الشروط والأحكام</a>
+  </div>
+
+  <!-- Hero -->
+  <section class="pt-[190px] pb-12 text-center text-white bg-gradient-to-r from-[#0E4C6E] to-[#1A936F]">
+    <h2 class="text-3xl md:text-4xl font-bold mb-3">الشروط والأحكام</h2>
+    <p class="text-blue-50 text-lg">يرجى قراءة هذه الشروط بعناية قبل استخدام موقعنا</p>
+  </section>
+
+  <!-- Terms Content -->
+  <section class="max-w-5xl mx-auto py-16 px-6 text-gray-700 leading-relaxed space-y-10">
+
+    <div data-aos="fade-up">
+      <h3 class="text-2xl font-bold text-[#0E4C6E] mb-3">1. قبول الشروط</h3>
+      <p>
+        باستخدامك لموقع <strong>شركة تكوين المعرفة للتعليم</strong>، فإنك توافق على الالتزام بهذه الشروط والأحكام وجميع القوانين ذات الصلة.
+        إذا كنت لا توافق على أي من هذه البنود، يرجى عدم استخدام الموقع.
+      </p>
+    </div>
+
+    <div data-aos="fade-up">
+      <h3 class="text-2xl font-bold text-[#0E4C6E] mb-3">2. استخدام الموقع</h3>
+      <p>
+        يُسمح باستخدام الموقع فقط للأغراض المشروعة والتعليمية.  
+        يُمنع استخدام أي محتوى أو خدمات بطريقة تسيء أو تنتهك الأنظمة أو حقوق الآخرين.
+      </p>
+    </div>
+
+    <div data-aos="fade-up">
+      <h3 class="text-2xl font-bold text-[#0E4C6E] mb-3">3. حقوق الملكية الفكرية</h3>
+      <p>
+        جميع المحتويات (النصوص، الصور، الشعارات، التصاميم) مملوكة لـ<strong>شركة تكوين المعرفة للتعليم</strong> 
+        أو مرخصة لها، ويُحظر إعادة استخدامها دون إذن كتابي مسبق.
+      </p>
+    </div>
+
+    <div data-aos="fade-up">
+      <h3 class="text-2xl font-bold text-[#0E4C6E] mb-3">4. حدود المسؤولية</h3>
+      <p>
+        تبذل الشركة جهدها لضمان دقة المعلومات على الموقع، لكنها لا تتحمل مسؤولية أي أضرار مباشرة أو غير مباشرة 
+        ناتجة عن استخدام الموقع أو الاعتماد على محتواه.
+      </p>
+    </div>
+
+    <div data-aos="fade-up">
+      <h3 class="text-2xl font-bold text-[#0E4C6E] mb-3">5. الروابط الخارجية</h3>
+      <p>
+        قد يحتوي الموقع على روابط لمواقع خارجية لا تخضع لإدارة الشركة،  
+        ولا تتحمل <strong>شركة تكوين المعرفة للتعليم</strong> مسؤولية محتوى هذه المواقع أو سياساتها.
+      </p>
+    </div>
+
+    <div data-aos="fade-up">
+      <h3 class="text-2xl font-bold text-[#0E4C6E] mb-3">6. التعديلات</h3>
+      <p>
+        تحتفظ الشركة بحقها في تعديل أو تحديث هذه الشروط في أي وقت، وتعتبر التعديلات نافذة فور نشرها على هذه الصفحة.  
+        يُنصح بمراجعة هذه الصفحة دوريًا.
+      </p>
+    </div>
+
+    <div data-aos="fade-up">
+      <h3 class="text-2xl font-bold text-[#0E4C6E] mb-3">7. التواصل معنا</h3>
+      <p>
+        لأي استفسارات تتعلق بهذه الشروط، يمكنكم التواصل معنا عبر البريد الإلكتروني:
+        <a href="mailto:info@takween-almaryfa.com" class="text-[#1A936F] font-semibold hover:underline">info@takween-almaryfa.com</a>
+      </p>
+    </div>
+
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-[#0E4C6E] text-white text-center py-4">
+    &copy; 2025 شركة تكوين المعرفة للتعليم. جميع الحقوق محفوظة.
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const header = document.getElementById('header');
+
+    menuBtn.addEventListener('click', () => {
+      menuBtn.classList.toggle('open');
+      mobileMenu.classList.toggle('active');
+    });
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 10) header.classList.add('header-shadow');
+      else header.classList.remove('header-shadow');
+    });
+
+    function adjustHeaderPosition() {
+    const topBar = document.getElementById('topBar');
+    const header = document.getElementById('header');
+
+    if (!topBar || !header) return;
+
+    const barHeight = topBar.offsetHeight;
+    header.style.top = barHeight + 'px';
+  }
+
+  window.addEventListener('load', adjustHeaderPosition);
+  window.addEventListener('resize', adjustHeaderPosition);
+  </script>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init({ duration: 900, once: true });</script>
+
+</body>
+</html>
