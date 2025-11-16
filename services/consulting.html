@@ -50,7 +50,7 @@
 <body class="text-gray-800">
 
   <!-- 🔹 Top Info Bar -->
-  <div id="topBar" class="bg-[#0E4C6E] text-white text-sm md:text-base fixed top-0 left-0 w-full z-50">
+  <div id="topBar" class="bg-[#0E4C6E] text-white text-sm md:text-base w-full ">
     <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center px-4 py-2 space-y-2 md:space-y-0">
 
       <!-- Left: Contact Info -->
@@ -181,18 +181,7 @@
       else header.classList.remove('header-shadow');
     });
 
-    function adjustHeaderPosition() {
-    const topBar = document.getElementById('topBar');
-    const header = document.getElementById('header');
-
-    if (!topBar || !header) return;
-
-    const barHeight = topBar.offsetHeight;
-    header.style.top = barHeight + 'px';
-  }
-
-  window.addEventListener('DOMContentLoaded', adjustHeaderPosition);
-  window.addEventListener('resize', adjustHeaderPosition);
+    
   </script>
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

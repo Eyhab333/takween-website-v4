@@ -53,7 +53,7 @@
 <body class="text-gray-800">
 
   <!-- 🔹 Top Info Bar -->
-<div id="topBar" class="bg-[#0E4C6E] text-white text-sm md:text-base fixed top-0 left-0 w-full z-50">
+<div id="topBar" class="bg-[#0E4C6E] text-white text-sm md:text-base w-full ">
   <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center px-4 py-2 space-y-2 md:space-y-0">
 
     <!-- Left: Contact Info -->
@@ -90,7 +90,7 @@
 
 
   <!-- Header -->
-  <header id="header" class="bg-[#0E4C6E] text-white fixed  left-0 w-full z-40 transition-all duration-300">
+  <header id="header" class="bg-[#0E4C6E] text-white  w-full  transition-all duration-300">
     <div class="max-w-6xl mx-auto flex justify-between items-center px-5 py-3">
       <div class="flex items-center gap-3">
         <img src="logo.PNG" alt="Logo" class="h-10 w-auto">
@@ -127,7 +127,7 @@
   </div>
 
   <!-- Hero -->
-  <section class="pt-[190px] pb-12 text-center text-white bg-gradient-to-r from-[#0E4C6E] to-[#1A936F]">
+  <section class="pt-[120px] pb-12 text-center text-white bg-gradient-to-r from-[#0E4C6E] to-[#1A936F]">
     <h2 class="text-3xl md:text-4xl font-bold mb-3">سياسة الخصوصية</h2>
     <p class="text-blue-50 text-lg">نلتزم بحماية خصوصية زوارنا ومستخدمي خدماتنا</p>
   </section>
@@ -210,18 +210,7 @@
       else header.classList.remove('header-shadow');
     });
 
-    function adjustHeaderPosition() {
-    const topBar = document.getElementById('topBar');
-    const header = document.getElementById('header');
-
-    if (!topBar || !header) return;
-
-    const barHeight = topBar.offsetHeight;
-    header.style.top = barHeight + 'px';
-  }
-
-  window.addEventListener('DOMContentLoaded', adjustHeaderPosition);
-  window.addEventListener('resize', adjustHeaderPosition);
+    
   </script>
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

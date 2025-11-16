@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Services – Takween Almaryfa Educationl Company</title>
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon-16x16.png">
+  <link rel="manifest" href="../assets/site.webmanifest">
+
+  <!-- Google font cairo -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet">
+
+  <!-- Tailwind & AOS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Cairo', sans-serif;
+      background-color: #F8FAFC;
+      scroll-behavior: smooth;
+    }
+
+    /* Mobile menu */
+    #mobile-menu {
+      position: fixed;
+      top: 0; left: 0;
+      width: 75%; height: 100%;
+      background: rgba(14, 76, 110, 0.9);
+      backdrop-filter: blur(10px);
+      transform: translateX(-100%);
+      transition: transform 0.4s ease;
+      z-index: 50;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+    }
+    #mobile-menu.active { transform: translateX(0); }
+    #mobile-menu a {
+      color: white; font-size: 1.3rem;
+      margin: 15px 0; text-decoration: none;
+    }
+    #mobile-menu a:hover { color: #A1E8AF; }
+
+    .hamburger.open span:nth-child(1){transform:rotate(45deg)translateY(8px);}
+    .hamburger.open span:nth-child(2){opacity:0;}
+    .hamburger.open span:nth-child(3){transform:rotate(-45deg)translateY(-8px);}
+
+    .header-shadow{box-shadow:0 4px 8px rgba(0,0,0,0.1);}
+  </style>
+</head>
+<body class="text-gray-800">
+
+  <!-- 🔹 Top Info Bar (NOT sticky) -->
+  <div id="topBar" class="bg-[#0E4C6E] text-white text-sm md:text-base w-full">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center px-4 py-2 space-y-2 md:space-y-0">
+
+      <!-- Left: Contact Info -->
+      <div class="flex flex-wrap items-center justify-center gap-4">
+        <span class="flex items-center gap-1">
+          📞 <a href="tel:0503389699" class="hover:text-[#A1E8AF]">0503389699</a>
+        </span>
+        <span class="hidden md:inline">|</span>
+        <span class="flex items-center gap-1">
+          ✉️ <a href="mailto:info@takween-almaryfa.com" class="hover:text-[#A1E8AF]">info@takween-almaryfa.com</a>
+        </span>
+        <span class="hidden md:inline">|</span>
+        <span class="flex items-center gap-1">
+          📍 <a href="https://maps.app.goo.gl/QuFLHv1mbAHyYPM17" target="_blank" class="hover:text-[#A1E8AF]">
+            Al Zulfi – Saudi Arabia
+          </a>
+        </span>
+      </div>
+
+      <!-- Right: Social Icons + Language Switch -->
+      <div class="flex items-center gap-4">
+        <a href="https://x.com/TakweenAlmaryfa" target="_blank" title="X" class="hover:text-[#A1E8AF] transition">
+          <img src="https://cdn-icons-png.flaticon.com/512/5968/5968958.png" alt="X" class="w-5 h-5">
+        </a>
+        <a href="https://www.facebook.com/profile.php?id=61581563847710" target="_blank" title="Facebook" class="hover:text-[#A1E8AF] transition">
+          <img src="https://cdn-icons-png.flaticon.com/512/5968/5968764.png" alt="Facebook" class="w-5 h-5">
+        </a>
+        <a href="https://www.youtube.com/@TakweenAlmaryfa" target="_blank" title="YouTube" class="hover:text-[#A1E8AF] transition">
+          <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube" class="w-5 h-5">
+        </a>
+        <!-- Language switch to Arabic main site -->
+        <a href="../services.html" class="hidden md:inline hover:text-[#A1E8AF] font-semibold">العربية</a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Header (NOT fixed) -->
+  <header id="header" class="bg-[#0E4C6E] text-white w-full z-40 transition-all duration-300">
+    <div class="max-w-6xl mx-auto flex justify-between items-center px-5 py-3">
+      <div class="flex items-center gap-3">
+        <img src="../logo.PNG" alt="Logo" class="h-10 w-auto">
+        <h1 class="text-lg font-bold">Takween Almaryfa Educationl Company</h1>
+      </div>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex space-x-6">
+        <a href="index-en.html" class="hover:text-[#A1E8AF]">Home</a>
+        <a href="about-en.html" class="hover:text-[#A1E8AF]">About Us</a>
+        <a href="services-en.html" class="text-[#A1E8AF] font-semibold">Services</a>
+        <a href="contact-en.html" class="hover:text-[#A1E8AF]">Contact</a>
+        <a href="privacy-en.html" class="hover:text-[#A1E8AF]">Privacy Policy</a>
+        <a href="terms-en.html" class="hover:text-[#A1E8AF]">Terms &amp; Conditions</a>
+      </nav>
+
+      <!-- Hamburger -->
+      <div id="menu-btn" class="hamburger md:hidden flex flex-col cursor-pointer z-50">
+        <span class="h-1 w-7 bg-white mb-1 transition-all duration-300"></span>
+        <span class="h-1 w-7 bg-white mb-1 transition-all duration-300"></span>
+        <span class="h-1 w-7 bg-white transition-all duration-300"></span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu">
+    <a href="index-en.html">Home</a>
+    <a href="about-en.html">About Us</a>
+    <a href="services-en.html">Services</a>
+    <a href="contact-en.html">Contact</a>
+    <a href="privacy-en.html">Privacy Policy</a>
+    <a href="terms-en.html">Terms &amp; Conditions</a>
+    <a href="../services.html">العربية</a>
+  </div>
+
+  <!-- Hero -->
+  <section class="pt-16 pb-12 text-center text-white bg-gradient-to-r from-[#0E4C6E] to-[#1A936F]">
+    <h2 class="text-3xl md:text-4xl font-bold mb-3">Our Services</h2>
+    <p class="text-blue-50 text-lg">
+      We provide integrated and innovative educational solutions to develop learning institutions
+    </p>
+  </section>
+
+  <!-- Services Cards -->
+  <section class="max-w-6xl mx-auto py-16 px-6 grid md:grid-cols-3 gap-10">
+
+    <!-- Card 1 -->
+    <div class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition p-8 text-center" data-aos="zoom-in">
+      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135755.png" class="h-16 mx-auto mb-5" alt="School Management">
+      <h3 class="text-2xl font-bold text-[#0E4C6E] mb-3">School Management & Operation</h3>
+      <p class="text-gray-600 mb-6 leading-relaxed">
+        Comprehensive supervision of the academic and administrative performance of schools
+        in line with quality standards and educational governance.
+      </p>
+      <a href="services/schools-en.html"
+         class="bg-gradient-to-r from-[#1A936F] to-[#0E4C6E] text-white px-6 py-2 rounded-lg hover:opacity-90 transition">
+        Learn More
+      </a>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition p-8 text-center" data-aos="zoom-in" data-aos-delay="100">
+      <img src="https://cdn-icons-png.flaticon.com/512/1995/1995574.png" class="h-16 mx-auto mb-5" alt="Training">
+      <h3 class="text-2xl font-bold text-[#0E4C6E] mb-3">Staff Training & Development</h3>
+      <p class="text-gray-600 mb-6 leading-relaxed">
+        Specialized training programs to prepare teachers and administrators and
+        enhance their professional and educational skills.
+      </p>
+      <a href="services/training-en.html"
+         class="bg-gradient-to-r from-[#1A936F] to-[#0E4C6E] text-white px-6 py-2 rounded-lg hover:opacity-90 transition">
+        Learn More
+      </a>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition p-8 text-center" data-aos="zoom-in" data-aos-delay="200">
+      <img src="https://cdn-icons-png.flaticon.com/512/3162/3162037.png" class="h-16 mx-auto mb-5" alt="Early Education">
+      <h3 class="text-2xl font-bold text-[#0E4C6E] mb-3">Kindergarten & Centers Management</h3>
+      <p class="text-gray-600 mb-6 leading-relaxed">
+        Safe and stimulating learning environments that develop children's skills,
+        based on modern curricula and contemporary learning methods.
+      </p>
+      <a href="services/nurseries-en.html"
+         class="bg-gradient-to-r from-[#1A936F] to-[#0E4C6E] text-white px-6 py-2 rounded-lg hover:opacity-90 transition">
+        Learn More
+      </a>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition p-8 text-center" data-aos="zoom-in" data-aos-delay="300">
+      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" class="h-16 mx-auto mb-5" alt="Consulting">
+      <h3 class="text-2xl font-bold text-[#0E4C6E] mb-3">Educational Consulting</h3>
+      <p class="text-gray-600 mb-6 leading-relaxed">
+        Specialized consulting services for educational institutions in the areas of
+        management, development, and quality assurance.
+      </p>
+      <a href="services/consulting-en.html"
+         class="bg-gradient-to-r from-[#1A936F] to-[#0E4C6E] text-white px-6 py-2 rounded-lg hover:opacity-90 transition">
+        Learn More
+      </a>
+    </div>
+
+    <!-- Card 5 -->
+    <div class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition p-8 text-center" data-aos="zoom-in" data-aos-delay="400">
+      <img src="https://cdn-icons-png.flaticon.com/512/1995/1995589.png" class="h-16 mx-auto mb-5" alt="Digital Education">
+      <h3 class="text-2xl font-bold text-[#0E4C6E] mb-3">Digital Transformation in Education</h3>
+      <p class="text-gray-600 mb-6 leading-relaxed">
+        Designing technological solutions and digital educational platforms that
+        facilitate communication and learning between students and teachers.
+      </p>
+      <a href="services/digital-en.html"
+         class="bg-gradient-to-r from-[#1A936F] to-[#0E4C6E] text-white px-6 py-2 rounded-lg hover:opacity-90 transition">
+        Learn More
+      </a>
+    </div>
+
+    <!-- Card 6 -->
+    <div class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition p-8 text-center" data-aos="zoom-in" data-aos-delay="500">
+      <img src="https://cdn-icons-png.flaticon.com/512/3062/3062634.png" class="h-16 mx-auto mb-5" alt="Community Projects">
+      <h3 class="text-2xl font-bold text-[#0E4C6E] mb-3">Community Projects</h3>
+      <p class="text-gray-600 mb-6 leading-relaxed">
+        Educational and social initiatives that aim to reinforce values and instill
+        a sense of responsibility among students and the wider community.
+      </p>
+      <a href="services/community-en.html"
+         class="bg-gradient-to-r from-[#1A936F] to-[#0E4C6E] text-white px-6 py-2 rounded-lg hover:opacity-90 transition">
+        Learn More
+      </a>
+    </div>
+
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-[#0E4C6E] text-white text-center py-4">
+    &copy; 2025 Takween Almaryfa Educationl Company. All rights reserved.
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const header = document.getElementById('header');
+
+    menuBtn.addEventListener('click', () => {
+      menuBtn.classList.toggle('open');
+      mobileMenu.classList.toggle('active');
+    });
+
+    // بس شادو بسيط مع السكول، مافيش sticky
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 10) header.classList.add('header-shadow');
+      else header.classList.remove('header-shadow');
+    });
+  </script>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 900, once: true });
+  </script>
+
+</body>
+</html>

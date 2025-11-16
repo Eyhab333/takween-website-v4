@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us – Takween Almaryfa Educationl Company</title>
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon-16x16.png">
+  <link rel="manifest" href="../assets/site.webmanifest">
+
+  <!-- Google font cairo -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet">
+
+  <!-- Tailwind & AOS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Cairo', sans-serif;
+      background-color: #F8FAFC;
+      scroll-behavior: smooth;
+    }
+
+    /* Mobile side menu */
+    #mobile-menu {
+      position: fixed;
+      top: 0; left: 0;
+      width: 75%; height: 100%;
+      background: rgba(14, 76, 110, 0.9);
+      backdrop-filter: blur(10px);
+      transform: translateX(-100%);
+      transition: transform 0.4s ease;
+      z-index: 50;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+    }
+    #mobile-menu.active { transform: translateX(0); }
+    #mobile-menu a {
+      color: white; font-size: 1.3rem;
+      margin: 15px 0; text-decoration: none;
+    }
+    #mobile-menu a:hover { color: #A1E8AF; }
+
+    /* Hamburger animation */
+    .hamburger.open span:nth-child(1){transform:rotate(45deg)translateY(8px);}
+    .hamburger.open span:nth-child(2){opacity:0;}
+    .hamburger.open span:nth-child(3){transform:rotate(-45deg)translateY(-8px);}
+
+    .header-shadow{box-shadow:0 4px 8px rgba(0,0,0,0.1);}
+  </style>
+</head>
+<body class="text-gray-800">
+
+  <!-- 🔹 Top Info Bar (NOT sticky الآن) -->
+  <div id="topBar" class="bg-[#0E4C6E] text-white text-sm md:text-base w-full">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center px-4 py-2 space-y-2 md:space-y-0">
+
+      <!-- Left: Contact Info -->
+      <div class="flex flex-wrap items-center justify-center gap-4">
+        <span class="flex items-center gap-1">
+          📞 <a href="tel:0503389699" class="hover:text-[#A1E8AF]">0503389699</a>
+        </span>
+        <span class="hidden md:inline">|</span>
+        <span class="flex items-center gap-1">
+          ✉️ <a href="mailto:info@takween-almaryfa.com" class="hover:text-[#A1E8AF]">info@takween-almaryfa.com</a>
+        </span>
+        <span class="hidden md:inline">|</span>
+        <span class="flex items-center gap-1">
+          📍 <a href="https://maps.app.goo.gl/QuFLHv1mbAHyYPM17" target="_blank" class="hover:text-[#A1E8AF]">
+            Al Zulfi – Saudi Arabia
+          </a>
+        </span>
+      </div>
+
+      <!-- Right: Social Icons -->
+      <div class="flex items-center gap-4">
+        <a href="https://x.com/TakweenAlmaryfa" target="_blank" title="X" class="hover:text-[#A1E8AF] transition">
+          <img src="https://cdn-icons-png.flaticon.com/512/5968/5968958.png" alt="X" class="w-5 h-5">
+        </a>
+        <a href="https://www.facebook.com/profile.php?id=61581563847710" target="_blank" title="Facebook" class="hover:text-[#A1E8AF] transition">
+          <img src="https://cdn-icons-png.flaticon.com/512/5968/5968764.png" alt="Facebook" class="w-5 h-5">
+        </a>
+        <a href="https://www.youtube.com/@TakweenAlmaryfa" target="_blank" title="YouTube" class="hover:text-[#A1E8AF] transition">
+        <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube" class="w-5 h-5">
+      </a>
+      <!-- Language switch to Arabic main site -->
+      <a href="../index.html" class="hidden md:inline hover:text-[#A1E8AF] font-semibold">العربية</a>
+    </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Header (NOT fixed) -->
+  <header id="header" class="bg-[#0E4C6E] text-white w-full z-40 transition-all duration-300">
+    <div class="max-w-6xl mx-auto flex justify-between items-center px-5 py-3">
+      <div class="flex items-center gap-3">
+        <img src="../logo.PNG" alt="Logo" class="h-10 w-auto">
+        <h1 class="text-lg font-bold">Takween Almaryfa Educationl Company</h1>
+      </div>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex space-x-6">
+        <a href="index-en.html" class="hover:text-[#A1E8AF]">Home</a>
+        <a href="about-en.html" class="text-[#A1E8AF] font-semibold">About Us</a>
+        <a href="services-en.html" class="hover:text-[#A1E8AF]">Services</a>
+        <a href="contact-en.html" class="hover:text-[#A1E8AF]">Contact</a>
+        <a href="privacy-en.html" class="hover:text-[#A1E8AF]">Privacy Policy</a>
+        <a href="terms-en.html" class="hover:text-[#A1E8AF]">Terms &amp; Conditions</a>
+      </nav>
+
+      <!-- Hamburger -->
+      <div id="menu-btn" class="hamburger md:hidden flex flex-col cursor-pointer z-50">
+        <span class="h-1 w-7 bg-white mb-1 transition-all duration-300"></span>
+        <span class="h-1 w-7 bg-white mb-1 transition-all duration-300"></span>
+        <span class="h-1 w-7 bg-white transition-all duration-300"></span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu">
+    <a href="index-en.html">Home</a>
+    <a href="about-en.html">About Us</a>
+    <a href="services-en.html">Services</a>
+    <a href="contact-en.html">Contact</a>
+    <a href="privacy-en.html">Privacy Policy</a>
+    <a href="terms-en.html">Terms &amp; Conditions</a>
+  </div>
+
+  <!-- Hero -->
+  <section class="pt-16 pb-12 text-center text-white bg-gradient-to-r from-[#0E4C6E] to-[#1A936F]">
+    <h2 class="text-3xl md:text-4xl font-bold mb-3">About Us</h2>
+    <p class="text-blue-50 text-lg">
+      A Saudi educational company specialized in developing and managing learning institutions
+    </p>
+  </section>
+
+  <!-- Intro -->
+  <section class="max-w-6xl mx-auto py-16 px-6 grid md:grid-cols-2 gap-10 items-center">
+    <div data-aos="fade-right">
+      <img src="https://images.unsplash.com/photo-1596495577886-d920f1fb7238?auto=format&fit=crop&w=900&q=80"
+           alt="About Takween" class="rounded-2xl shadow-lg">
+    </div>
+    <div data-aos="fade-left" class="text-lg leading-relaxed">
+      <p>
+        <strong>Takween Almaryfa Educationl Company</strong> was established to be
+        a leading model in managing and operating schools, kindergartens, and educational centers,
+        according to the highest standards of quality and innovation. We keep pace with educational
+        and technological developments in the Kingdom of Saudi Arabia.
+      </p>
+      <p class="mt-4">
+        We believe that education is the cornerstone of building nations. Therefore, we strive to
+        empower both students and educators by providing an inspiring learning environment that
+        combines knowledge with practice, and authenticity with innovation.
+      </p>
+    </div>
+  </section>
+
+  <!-- Vision / Mission / Values -->
+  <section class="bg-[#F8FAFC] py-20 text-center">
+    <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-10 px-6">
+
+      <!-- Vision -->
+      <div class="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition" data-aos="zoom-in">
+        <h3 class="text-2xl font-bold text-[#0E4C6E] mb-4">Our Vision</h3>
+        <p class="text-gray-600 leading-relaxed">
+          To be pioneers in educational development and management, and a role model in achieving
+          high-quality learning and building creative individuals.
+        </p>
+      </div>
+
+      <!-- Mission -->
+      <div class="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition" data-aos="zoom-in" data-aos-delay="100">
+        <h3 class="text-2xl font-bold text-[#0E4C6E] mb-4">Our Mission</h3>
+        <p class="text-gray-600 leading-relaxed">
+          To provide integrated educational services that enable institutions to achieve their goals,
+          and to support educational staff with modern knowledge tools and distinguished learning methods.
+        </p>
+      </div>
+
+      <!-- Values -->
+      <div class="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition" data-aos="zoom-in" data-aos-delay="200">
+        <h3 class="text-2xl font-bold text-[#0E4C6E] mb-4">Our Values</h3>
+        <ul class="text-gray-600 space-y-2 leading-relaxed text-left md:text-left">
+          <li>🌟 Quality and Excellence</li>
+          <li>🤝 Cooperation and Responsibility</li>
+          <li>💡 Innovation and Creativity</li>
+          <li>📚 Professionalism and Mastery</li>
+          <li>💚 Transparency and Integrity</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-[#0E4C6E] text-white text-center py-4">
+    &copy; 2025 Takween Almaryfa Educationl Company. All rights reserved.
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const header = document.getElementById('header');
+
+    menuBtn.addEventListener('click', () => {
+      menuBtn.classList.toggle('open');
+      mobileMenu.classList.toggle('active');
+    });
+
+    // احتفظنا فقط بشادو بسيط عند السكول، مافيش sticky
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 10) header.classList.add('header-shadow');
+      else header.classList.remove('header-shadow');
+    });
+  </script>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 900, once: true });
+  </script>
+</body>
+</html>

@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
-<link rel="manifest" href="assets/site.webmanifest">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+  <link rel="manifest" href="assets/site.webmanifest">
   <title>شركة تكوين المعرفة للتعليم</title>
-    <!-- Google font cairo -->
+  <!-- Google font cairo -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet">
@@ -30,6 +31,7 @@
     nav a {
       position: relative;
     }
+
     nav a::after {
       content: "";
       position: absolute;
@@ -40,6 +42,7 @@
       background: #A1E8AF;
       transition: width 0.3s ease;
     }
+
     nav a:hover::after {
       width: 100%;
       left: 0;
@@ -62,6 +65,7 @@
       align-items: center;
       justify-content: center;
     }
+
     #mobile-menu.active {
       transform: translateX(0);
     }
@@ -73,6 +77,7 @@
       margin: 15px 0;
       transition: color 0.2s;
     }
+
     #mobile-menu a:hover {
       color: #A1E8AF;
     }
@@ -81,63 +86,74 @@
     .hamburger.open span:nth-child(1) {
       transform: rotate(45deg) translateY(8px);
     }
+
     .hamburger.open span:nth-child(2) {
       opacity: 0;
     }
+
     .hamburger.open span:nth-child(3) {
       transform: rotate(-45deg) translateY(-8px);
     }
 
     /* Shadow on scroll */
     .header-shadow {
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
   </style>
 </head>
+
 <body class="text-gray-800">
 
-<!-- 🔹 Top Info Bar -->
-<div id="topBar" class="bg-[#0E4C6E] text-white text-sm md:text-base fixed top-0 left-0 w-full z-50">
-  <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center px-4 py-2 space-y-2 md:space-y-0">
+  <!-- 🔹 Top Info Bar -->
+  <div id="topBar" class="bg-[#0E4C6E] text-white text-sm md:text-base  w-full ">
+    <div
+      class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center px-4 py-2 space-y-2 md:space-y-0">
 
-    <!-- Left: Contact Info -->
-    <div class="flex flex-wrap items-center justify-center gap-4">
-      <span class="flex items-center gap-1">
-        📞 <a href="tel:0503389699" class="hover:text-[#A1E8AF]">0503389699</a>
-      </span>
-      <span class="hidden md:inline">|</span>
-      <span class="flex items-center gap-1">
-        ✉️ <a href="mailto:info@takween-almaryfa.com" class="hover:text-[#A1E8AF]">info@takween-almaryfa.com</a>
-      </span>
-      <span class="hidden md:inline">|</span>
-      <span class="flex items-center gap-1">
-        📍 <a href="https://maps.app.goo.gl/QuFLHv1mbAHyYPM17" target="_blank" class="hover:text-[#A1E8AF]">الزلفي – السعودية</a>
-      </span>
+      <!-- Left: Contact Info -->
+      <div class="flex flex-wrap items-center justify-center gap-4">
+        <span class="flex items-center gap-1">
+          📞 <a href="tel:0503389699" class="hover:text-[#A1E8AF]">0503389699</a>
+        </span>
+        <span class="hidden md:inline">|</span>
+        <span class="flex items-center gap-1">
+          ✉️ <a href="mailto:info@takween-almaryfa.com" class="hover:text-[#A1E8AF]">info@takween-almaryfa.com</a>
+        </span>
+        <span class="hidden md:inline">|</span>
+        <span class="flex items-center gap-1">
+          📍 <a href="https://maps.app.goo.gl/QuFLHv1mbAHyYPM17" target="_blank" class="hover:text-[#A1E8AF]">الزلفي –
+            السعودية</a>
+        </span>
+      </div>
+
+      <!-- Right: Social Icons -->
+      <div class="flex items-center gap-4">
+
+        <a href="https://x.com/TakweenAlmaryfa" target="_blank" title="X (تويتر)"
+          class="hover:text-[#A1E8AF] transition">
+          <img src="https://cdn-icons-png.flaticon.com/512/5968/5968958.png" alt="X" class="w-5 h-5">
+        </a>
+        <a href="https://www.facebook.com/profile.php?id=61581563847710" target="_blank" title="فيسبوك"
+          class="hover:text-[#A1E8AF] transition">
+          <img src="https://cdn-icons-png.flaticon.com/512/5968/5968764.png" alt="Facebook" class="w-5 h-5">
+        </a>
+        <a href="https://www.youtube.com/@TakweenAlmaryfa" target="_blank" title="يوتيوب"
+          class="hover:text-[#A1E8AF] transition">
+          <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube" class="w-5 h-5">
+        </a>
+
+        <!-- زر التحويل للنسخة الإنجليزية -->
+        <a href="en/index-en.html" class="hidden md:inline hover:text-[#A1E8AF] font-semibold">
+          English
+        </a>
+      </div>
+
     </div>
-
-    <!-- Right: Social Icons -->
-    <div class="flex items-center gap-4">
-      
-      <a href="https://x.com/TakweenAlmaryfa" target="_blank" title="X (تويتر)" class="hover:text-[#A1E8AF] transition">
-        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968958.png" alt="X" class="w-5 h-5">
-      </a>
-      <a href="https://www.facebook.com/profile.php?id=61581563847710" target="_blank" title="فيسبوك" class="hover:text-[#A1E8AF] transition">
-        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968764.png" alt="Facebook" class="w-5 h-5">
-      </a>
-      <a href="https://www.youtube.com/@TakweenAlmaryfa" target="_blank" title="يوتيوب" class="hover:text-[#A1E8AF] transition">
-        <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube" class="w-5 h-5">
-      </a>
-
-      
-    </div>
-
   </div>
-</div>
 
 
 
   <!-- Header -->
-  <header id="header" class="bg-[#0E4C6E] text-white fixed left-0 w-full z-40 transition-all duration-300">
+  <header id="header" class="bg-[#0E4C6E] text-white  w-full  transition-all duration-300">
     <div class="max-w-6xl mx-auto flex justify-between items-center px-5 py-3">
       <div class="flex items-center gap-3">
         <img src="logo.PNG" alt="Logo" class="h-10 w-auto">
@@ -155,7 +171,8 @@
       </nav>
 
       <!-- Hamburger -->
-      <div id="menu-btn" class="hamburger md:hidden flex flex-col cursor-pointer transition-transform duration-300 z-50">
+      <div id="menu-btn"
+        class="hamburger md:hidden flex flex-col cursor-pointer transition-transform duration-300 z-50">
         <span class="h-1 w-7 bg-white mb-1 transition-all duration-300"></span>
         <span class="h-1 w-7 bg-white mb-1 transition-all duration-300"></span>
         <span class="h-1 w-7 bg-white transition-all duration-300"></span>
@@ -169,20 +186,21 @@
     <a href="about.html">من نحن</a>
     <a href="services.html">خدماتنا</a>
     <a href="contact.html">اتصل بنا</a>
-    <a href="privacy.html" > سياسة الخصوصية</a>
-    <a href="terms.html" > الشروط والأحكام</a>
+    <a href="privacy.html"> سياسة الخصوصية</a>
+    <a href="terms.html"> الشروط والأحكام</a>
+    <a href="en/index-en.html">English</a>
   </div>
 
   <!-- Hero -->
-  <section id="home" class="pt-28 text-center text-white" 
-           style="background: linear-gradient(to bottom right, #0E4C6E, #1A936F);" 
-           data-aos="fade-in">
+  <section id="home" class="pt-28 text-center text-white"
+    style="background: linear-gradient(to bottom right, #0E4C6E, #1A936F);" data-aos="fade-in">
     <div class="max-w-3xl mx-auto py-24">
       <h2 class="text-3xl md:text-5xl font-bold mb-6">نُمكِّنُ الإبداعَ ونُعزِّزُ المعرفة</h2>
       <p class="text-lg text-[#E0F2F1] leading-relaxed mb-8">
         نُقدّم حلولاً تعليمية ومجتمعية مبتكرة لبناء جيلٍ مبدع، متعلّم، ومؤثر في مجتمعه.
       </p>
-      <a href="#about" class="bg-[#A1E8AF] text-[#0E4C6E] px-8 py-3 rounded-lg font-semibold hover:bg-[#B6F2BA] transition">
+      <a href="#about"
+        class="bg-[#A1E8AF] text-[#0E4C6E] px-8 py-3 rounded-lg font-semibold hover:bg-[#B6F2BA] transition">
         تعرّف علينا
       </a>
     </div>
@@ -192,15 +210,18 @@
   <section id="about" class="py-20 max-w-6xl mx-auto px-5">
     <div class="text-center mb-10" data-aos="fade-down">
       <h3 class="text-3xl font-bold text-[#0E4C6E]">من نحن</h3>
-      <p class="text-gray-600 mt-3">شركة سعودية رائدة في تطوير وإدارة المؤسسات التعليمية وفق معايير الجودة والابتكار.</p>
+      <p class="text-gray-600 mt-3">شركة سعودية رائدة في تطوير وإدارة المؤسسات التعليمية وفق معايير الجودة والابتكار.
+      </p>
     </div>
 
     <div class="grid md:grid-cols-2 gap-10 items-center">
       <div data-aos="fade-left">
-        <img src="https://images.unsplash.com/photo-1596495577886-d920f1fb7238?auto=format&fit=crop&w=900&q=80" class="rounded-2xl shadow-lg" alt="about">
+        <img src="https://images.unsplash.com/photo-1596495577886-d920f1fb7238?auto=format&fit=crop&w=900&q=80"
+          class="rounded-2xl shadow-lg" alt="about">
       </div>
       <div data-aos="fade-right" class="text-lg leading-relaxed">
-        <p>تسعى شركة تكوين المعرفة إلى إدارة وتشغيل المدارس والروضات والمراكز التعليمية بروح الابتكار والإبداع، وتسهم في بناء بيئة تعليمية محفّزة تنمي مهارات الطلبة والمعلمين.</p>
+        <p>تسعى شركة تكوين المعرفة إلى إدارة وتشغيل المدارس والروضات والمراكز التعليمية بروح الابتكار والإبداع، وتسهم في
+          بناء بيئة تعليمية محفّزة تنمي مهارات الطلبة والمعلمين.</p>
         <ul class="list-disc pr-6 mt-4 space-y-2">
           <li>رفع جودة التعليم.</li>
           <li>تمكين الكوادر الوطنية.</li>
@@ -240,12 +261,14 @@
     <h3 class="text-3xl font-bold text-[#0E4C6E] mb-6" data-aos="fade-up">اتصل بنا</h3>
     <p class="text-gray-700 mb-6" data-aos="fade-up" data-aos-delay="100">
       📍 الزلفي – المملكة العربية السعودية<br>
-      
-        📞 <a href="tel:0503389699" class="hover:text-[#A1E8AF]">0503389699</a>
-      
+
+      📞 <a href="tel:0503389699" class="hover:text-[#A1E8AF]">0503389699</a>
+
       ✉️ info@takween-almaryfa.com
     </p>
-    <a href="mailto:info@takween-almaryfa.com" class="bg-gradient-to-r from-[#1A936F] to-[#0E4C6E] text-white px-8 py-3 rounded-lg hover:opacity-90 transition" data-aos="fade-up" data-aos-delay="200">
+    <a href="mailto:info@takween-almaryfa.com"
+      class="bg-gradient-to-r from-[#1A936F] to-[#0E4C6E] text-white px-8 py-3 rounded-lg hover:opacity-90 transition"
+      data-aos="fade-up" data-aos-delay="200">
       تواصل معنا الآن
     </a>
   </section>
@@ -274,21 +297,7 @@
       }
     });
 
-  function adjustHeaderPosition() {
-    const topBar = document.getElementById('topBar');
-    const header = document.getElementById('header');
 
-    if (!topBar || !header) return;
-
-    const barHeight = topBar.offsetHeight; // ارتفاع الشريط العلوي بالبكسل
-    header.style.top = barHeight + 'px';
-  }
-
-  // شغّلها أول ما الصفحة تفتح
-  window.addEventListener('DOMContentLoaded', adjustHeaderPosition);
-
-  // وشغّلها لما حجم الشاشة يتغير (مهم للجوال عشان الwrap)
-  window.addEventListener('resize', adjustHeaderPosition);
 
   </script>
 
@@ -298,4 +307,5 @@
   </script>
 
 </body>
+
 </html>
