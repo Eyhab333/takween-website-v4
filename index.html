@@ -21,16 +21,25 @@
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
   <style>
+    html {
+      overflow-x: hidden;
+    }
+
     body {
       font-family: 'Cairo', sans-serif;
       scroll-behavior: smooth;
       background-color: #F8FAFC;
+      overflow-x: hidden;
     }
 
     /* === Hover underline animation === */
     nav a {
       position: relative;
     }
+.no-scroll {
+  overflow: hidden;
+  height: 100vh;
+}
 
     nav a::after {
       content: "";
@@ -49,7 +58,7 @@
     }
 
     /* === Mobile Side Menu === */
-    #mobile-menu {
+    /* #mobile-menu {
       position: fixed;
       top: 0;
       right: 0;
@@ -64,7 +73,35 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-    }
+    } */
+    #mobile-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(14, 76, 110, 0.95);
+  backdrop-filter: blur(10px);
+  transform: translateX(100%);
+  transition: transform 0.4s ease;
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* زر X */
+#close-menu {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  font-size: 2rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+
 
     #mobile-menu.active {
       transform: translateX(0);
@@ -181,15 +218,22 @@
   </header>
 
   <!-- Mobile Menu -->
-  <div id="mobile-menu">
-    <a href="#home">الرئيسية</a>
-    <a href="about.html">من نحن</a>
-    <a href="services.html">خدماتنا</a>
-    <a href="contact.html">اتصل بنا</a>
-    <a href="privacy.html"> سياسة الخصوصية</a>
-    <a href="terms.html"> الشروط والأحكام</a>
-    <a href="en/index-en.html">English</a>
-  </div>
+<div id="mobile-menu">
+  <!-- زر الإغلاق X -->
+  <button id="close-menu"
+    class="absolute top-4 left-4 text-white text-3xl md:hidden">
+    &times;
+  </button>
+
+  <a href="#home">الرئيسية</a>
+  <a href="about.html">من نحن</a>
+  <a href="services.html">خدماتنا</a>
+  <a href="contact.html">اتصل بنا</a>
+  <a href="privacy.html"> سياسة الخصوصية</a>
+  <a href="terms.html"> الشروط والأحكام</a>
+  <a href="en/index-en.html">English</a>
+</div>
+
 
   <!-- Hero -->
   <section id="home" class="pt-28 text-center text-white"
@@ -280,26 +324,55 @@
 
   <!-- JS -->
   <script>
-    const menuBtn = document.getElementById('menu-btn');
-    const mobileMenu = document.getElementById('mobile-menu');
-    const header = document.getElementById('header');
+  const menuBtn = document.getElementById('menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const header = document.getElementById('header');
+  const closeMenuBtn = document.getElementById('close-menu');
+  const mobileLinks = mobileMenu.querySelectorAll('a');
 
-    menuBtn.addEventListener('click', () => {
-      menuBtn.classList.toggle('open');
-      mobileMenu.classList.toggle('active');
+  function openMenu() {
+    menuBtn.classList.add('open');
+    mobileMenu.classList.add('active');
+    document.body.classList.add('no-scroll'); // لو مش عامل الكلاس ده، ممكن تشيله
+  }
+
+  function closeMenu() {
+    menuBtn.classList.remove('open');
+    mobileMenu.classList.remove('active');
+    document.body.classList.remove('no-scroll'); // لو مش عامل الكلاس ده، ممكن تشيله
+  }
+
+  function toggleMenu() {
+    if (mobileMenu.classList.contains('active')) {
+      closeMenu();
+    } else {
+      openMenu();
+    }
+  }
+
+  // فتح/إغلاق المنيو بالهامبرجر
+  menuBtn.addEventListener('click', toggleMenu);
+
+  // إغلاق المنيو بزر X
+  closeMenuBtn.addEventListener('click', closeMenu);
+
+  // إغلاق المنيو عند الضغط على أي لينك داخلها
+  mobileLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      closeMenu();
     });
+  });
 
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 10) {
-        header.classList.add('header-shadow');
-      } else {
-        header.classList.remove('header-shadow');
-      }
-    });
+  // شادو على الهيدر مع السكروول
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 10) {
+      header.classList.add('header-shadow');
+    } else {
+      header.classList.remove('header-shadow');
+    }
+  });
+</script>
 
-
-
-  </script>
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>

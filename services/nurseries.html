@@ -39,6 +39,10 @@
       margin: 15px 0; text-decoration: none;
     }
     #mobile-menu a:hover { color: #A1E8AF; }
+.no-scroll {
+  overflow: hidden;
+  height: 100vh;
+}
 
     .hamburger.open span:nth-child(1){transform:rotate(45deg)translateY(8px);}
     .hamburger.open span:nth-child(2){opacity:0;}
@@ -171,9 +175,10 @@
     const header = document.getElementById('header');
 
     menuBtn.addEventListener('click', () => {
-      menuBtn.classList.toggle('open');
-      mobileMenu.classList.toggle('active');
-    });
+  menuBtn.classList.toggle('open');
+  mobileMenu.classList.toggle('active');
+  document.body.classList.toggle('no-scroll');
+});
 
     window.addEventListener('scroll', () => {
       if (window.scrollY > 10) header.classList.add('header-shadow');

@@ -21,10 +21,15 @@
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
   <style>
+    html {
+      overflow-x: hidden;
+    }
+
     body {
       font-family: 'Cairo', sans-serif;
-      background-color: #F8FAFC;
       scroll-behavior: smooth;
+      background-color: #F8FAFC;
+      overflow-x: hidden;
     }
 
     /* Mobile side menu */
@@ -46,6 +51,10 @@
       margin: 15px 0; text-decoration: none;
     }
     #mobile-menu a:hover { color: #A1E8AF; }
+.no-scroll {
+  overflow: hidden;
+  height: 100vh;
+}
 
     /* Hamburger animation */
     .hamburger.open span:nth-child(1){transform:rotate(45deg)translateY(8px);}
@@ -212,9 +221,10 @@
     const header = document.getElementById('header');
 
     menuBtn.addEventListener('click', () => {
-      menuBtn.classList.toggle('open');
-      mobileMenu.classList.toggle('active');
-    });
+  menuBtn.classList.toggle('open');
+  mobileMenu.classList.toggle('active');
+  document.body.classList.toggle('no-scroll');
+});
 
     // احتفظنا فقط بشادو بسيط عند السكول، مافيش sticky
     window.addEventListener('scroll', () => {
